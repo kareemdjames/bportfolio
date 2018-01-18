@@ -8,6 +8,7 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,7 +42,7 @@
                 <i class="fa fa-graduation-cap d-block"></i> Resume
               </div>
               <div class="port-item p-4 bg-warning">
-                <i class="fa fa-folder-open d-block"></i> Work
+                <i class="fa fa-folder-open d-block" data-toggle="collapse" data-target="#work"></i> Work
               </div>
               <div class="port-item p-4 bg-danger">
                 <i class="fa fa-envelope d-block"></i> Contact
@@ -144,6 +145,63 @@
       </div>
     </div>
 
+    <!--WORK-->
+
+    <div id="work" class="collapse">
+      <div class="card card-body bg-warning py-5">
+        <h2>My Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, saepe.</p>
+      </div>
+      <div class="card card-body py-5">
+        <h3>What have I built?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error incidunt iste nam, officiis totam voluptatem!</p>
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=251" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=252" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=253" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=254" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-3">
+              <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox">
+                <img src="https://unsplash.it/600.jpg?image=255" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox">
+                <img src="https://unsplash.it/600.jpg?image=256" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://unsplash.it/1200/768.jpg?image=257" data-toggle="lightbox">
+                <img src="https://unsplash.it/600.jpg?image=257" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://unsplash.it/1200/768.jpg?image=258" data-toggle="lightbox">
+                <img src="https://unsplash.it/600.jpg?image=258" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!--FOOTER-->
     <footer id="main-footer" class="p-5 bg-dark text-white">
       <div class="row">
@@ -157,10 +215,16 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
   <script>
     // Collapses open tab when new tab is clicked
     $('.port-item').click(function () {
       $('.collapse').collapse('hide')
+    })
+    // Provides the Ekko Lightbox toggle
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
     })
   </script>
 </body>
